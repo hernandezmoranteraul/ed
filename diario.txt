@@ -1,0 +1,11 @@
+20180917
+ VirtualBox (pendiente de anotar)
+
+ git:
+ crar usuario y repositorio en github (pendiente de anotar)
+
+
+ git clone https://github.com/hernandezmoranteraul/ed.git
+ git config --global user.name hernandezmoranteraul
+ git config --global user.email 1dam.rhernandez@institutoserpis.org
+ git config --global push.default simple
