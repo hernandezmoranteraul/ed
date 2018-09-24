@@ -2,10 +2,18 @@
  VirtualBox (pendiente de anotar)
 
  git:
- crar usuario y repositorio en github (pendiente de anotar)
+ crear usuario y repositorio en github (pendiente de anotar)
 
 
  git clone https://github.com/hernandezmoranteraul/ed.git
  git config --global user.name hernandezmoranteraul
  git config --global user.email 1dam.rhernandez@institutoserpis.org
  git config --global push.default simple
+
+20180924
+En maquina virtual con ubuntu 16.04:
+	sudo apt-add-repository ppa:webup8team/java
+	sudo apt update
+	sudo apt install oracle-java-installer
+
+Creamos HolaMundo.java, y compilamos y ejecutamos.
