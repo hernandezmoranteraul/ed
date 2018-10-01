@@ -11,9 +11,13 @@
  git config --global push.default simple
 
 20180924
-En maquina virtual con ubuntu 16.04:
+En maquina virtual con ubuntu 16.04 instalamos el jdk java8:
 	sudo apt-add-repository ppa:webup8team/java
 	sudo apt update
 	sudo apt install oracle-java-installer
 
 Creamos HolaMundo.java, y compilamos y ejecutamos.
+
+20180927
+ sudo apt update
+ sudo apt install git
