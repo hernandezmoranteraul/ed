@@ -31,5 +31,14 @@ class VectorTest {
 		assertEquals(12, Vector.min(new int [] {14,12}));
 		assertEquals(12, Vector.min(new int [] {12}));
 	}
-
+	
+	@Test
+	void indexOfMin() {
+		assertEquals (2, Vector.indexOfMin(new int [] {15,14,12,17,16}));
+		assertEquals (0, Vector.indexOfMin(new int [] {12,15,14,17,16}));
+		assertEquals (4, Vector.indexOfMin(new int [] {15,14,16,17,12}));
+		assertEquals (1, Vector.indexOfMin(new int [] {15,12}));
+		assertEquals (0, Vector.indexOfMin(new int [] {12,27}));
+		assertEquals (0, Vector.indexOfMin(new int [] {12}));
+	}
 }
