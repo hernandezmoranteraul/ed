@@ -41,4 +41,32 @@ class VectorTest {
 		assertEquals (0, Vector.indexOfMin(new int [] {12,27}));
 		assertEquals (0, Vector.indexOfMin(new int [] {12}));
 	}
+	@Test
+	void indexOfMinWhitinitialIndex() {
+		assertEquals (1, Vector.indexOfMin(new int [] {16,12,15,14,17},0));
+		assertEquals (2, Vector.indexOfMin(new int [] {12,13,15,17,16},2));
+	}
+	@Test
+	void sort() {
+		int[] v = new int[] {12};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12},v);
+		v = new int[] {15,12};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,15},v);
+		v = new int [] {17,12,15};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,15,17},v);
+		v = new int [] {16,12,15,14,17};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,14,15,16,17},v);
+		v = new int [] {12,14,15,16,17};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,14,15,16,17},v);
+		
+		
+		
+		
+	}
+	
 }

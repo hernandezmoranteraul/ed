@@ -47,51 +47,43 @@ public class Vector {
 			return posicion;
 	}
 	
-	public static void sort(int[] v) {
-		int num = v[0];
-		int num1 = v[0];
-		int num2 = v[0];
-		int num3 = v[0];
-		int num4 = v[0];
-		int [] ordenado = new int [v.length];
-		for (int vposicion = 1; vposicion < v.length; vposicion++) {
-			if ( v[vposicion]< num) {
-				num = v[vposicion];
-				ordenado[0] = num;
-			}
-		}
-		for (int vposicion1 = 1; vposicion1 < v.length; vposicion1++) {
-			if ( v[vposicion1]> num) {
-				num1 = v[vposicion1];
-				ordenado[4] = num1;
-			
-			}
-		
-		}
-		
-		for (int vposicion2 = 1; vposicion2 < 4; vposicion2++) {
-			if ( v[vposicion2]< num2) {
-				num1 = v[vposicion2];
-				ordenado[1] = num2;
-			
-			}
-		
-		}
-		
-		for (int vposicion3 = 1; vposicion3 < 4; vposicion3++) {
-			if ( v[vposicion3]< num2) {
-				num1 = v[vposicion3];
-				ordenado[3] = num3;
-				ordenado[2] = num4;
-			}
-			
-		}
-			
-			for (int x = 0;x < ordenado.length; x++) {
-				System.out.println (ordenado[x]);
-			}
-		
+	public static int indexOfMin(int[] v, int initialIndex) {
+		int indexOfMin = initialIndex;
+		for (int index = initialIndex + 1; index < v.length; index++)
+			if (v[index] < v[indexOfMin])
+				indexOfMin = index;
+		return indexOfMin;
 	}
+	
+	private static void swap (int[] v, int indexOne, int indexTwo) {
+		int aux = v[indexOne];
+		v[indexOne]=v[indexTwo];
+		v[indexTwo]= aux;
+	}
+	
+	public static void sort(int[] v) {
+		//indexOfSelected [0,n-2] idex del elemento seleccionado 
+		//indexOfMin [indexOfSelected, n-1]
+		//index auxiliar para obtener indexOfMin
+//		
+//		int n = v.length;
+//		for (int indexOfSelected = 0; indexOfSelected < v.length-1; indexOfSelected++) {
+//			int indexOfMin =indexOfSelected;
+//			for (int index = indexOfSelected + 1; index < n; index++)
+//				if (v[index]< v [indexOfMin])
+//					indexOfMin = index;
+//		int aux = v[indexOfSelected];
+//		v[indexOfSelected]=v[indexOfMin];
+//		v[indexOfMin]= aux;
+//		}
+		for (int index = 0; index < v.length-1; index++)
+			swap(v,index, indexOfMin(v, index));
+	}
+		
+	
+	
+	
+	
 
 	
 	public static void main(String[] args) {
